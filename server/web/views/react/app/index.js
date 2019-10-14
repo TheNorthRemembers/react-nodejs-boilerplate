@@ -7,9 +7,11 @@ type $State = any;
 
 class App extends React.Component<$Props, $State> {
   render() {
-    return <div>Hi World again!</div>;
+    return <div>Hello World</div>;
   }
 }
-// document.getElementById("root") could be null so
-// $FlowIgnore
-ReactDOM.render(<App />, document.getElementById("root"));
+
+const root = document.getElementById("root");
+if (root) {
+  ReactDOM.render(<App />, root);
+}
